@@ -32,7 +32,7 @@ define( function( require ) {
 				$('.step').hide(); // All DOM elements which are steps should have this class (this hides them all)
 				$('#step' + step ).show(); // This selectively only displays the current step
 				// Allow the user to make any changes and when you're ready, use:
-				connection.trigger( 'updateStep', step ); 
+				connection.trigger( 'updateStep', step );
 			}
 		}
 	**/
@@ -50,14 +50,14 @@ define( function( require ) {
 
     connection.on('requestPayload', function() {
 	 var payload = {};
- 
+
         payload.options = {
-           
+
         };
 
 		//TODO: Shouldn't this come from the data?
-        payload.flowDisplayName = 'Hello World';
- 
+        payload.flowDisplayName = 'Direct Mail';
+
         connection.trigger('getPayload', payload);
     });
 
@@ -74,5 +74,5 @@ define( function( require ) {
 
 	// When everything has been configured for this activity, trigger
 	// the save:
-	// connection.trigger('save', 
+	// connection.trigger('save',
 });
